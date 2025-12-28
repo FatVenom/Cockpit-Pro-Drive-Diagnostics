@@ -1,0 +1,16 @@
+{
+    "version": "1.0",
+    "label": "Drive Health",
+    "menu": {
+        "system": {
+            "label": "Drive Health",
+            "order": 10
+        }
+    },
+    "tools": {
+        "smartview": {
+            "label": "Drive Health",
+            "path": "index.html"
+        }
+    }
+}
