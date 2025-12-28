@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pro Drive Diagnostics</title>
+    <script src="../base1/cockpit.js"></script>
+    <link href="../base1/standard.css" rel="stylesheet">
+    <style>
+        /* Professional Light UI */
+        body { background-color: #f8f9fa; color: #000000; padding: 20px; font-family: sans-serif; }
+        h3 { color: #1a1a1a; margin-top: 0; border-bottom: 2px solid #0066cc; padding-bottom: 8px; }
+
+        .toolbar {
+            display: flex; gap: 10px; margin: 15px 0; align-items: center;
+            background: #ffffff; padding: 12px; border-radius: 6px;
+            border: 1px solid #dee2e6; box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        select, input { border: 1px solid #ced4da; padding: 7px; border-radius: 4px; font-size: 13px; }
+        input { flex-grow: 1; }
+
+        button { border: none; padding: 8px 16px; border-radius: 4px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+        #refresh { background-color: #0066cc; color: white; }
+        #selftest { background-color: #28a745; color: white; }
+        #download { background-color: #6c757d; color: white; }
+        button:hover { filter: brightness(90%); }
+
+        /* Report Box: High contrast black on white */
+        #output {
+            background-color: #ffffff; color: #000000 !important; padding: 15px;
+            border-radius: 6px; font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px; line-height: 1.4; overflow: auto; white-space: pre;
+            border: 1px solid #dee2e6; height: 60vh; width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h3>Pro Drive Diagnostics</h3>
+    <div class="toolbar">
+        <select id="drive-select"><option>Scanning...</option></select>
+        <input type="text" id="search-input" placeholder="Quick search (e.g. Temperature, Hours)...">
+        <button id="refresh">Get Report</button>
+        <button id="selftest">Self-Test</button>
+        <button id="download">Download .txt</button>
+    </div>
+    <pre id="output">System ready. Select a drive to generate a report.</pre>
+    <script src="smartview.js"></script>
+</body>
+</html>
+
+
